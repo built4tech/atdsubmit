@@ -2,3 +2,35 @@
 2018-05-25 15:43:38,344 ERROR Connection to Sandbox appliance: 192.168.20.140 unsucesfull
 2018-05-25 15:43:38,344 ERROR Error connecting to ATD:
  HTTPSConnectionPool(host='192.168.20.140', port=443): Max retries exceeded with url: /php/session.php (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000003C92400>: Failed to establish a new connection: [Errno 10060] Se produjo un error durante el intento de conexi\xf3n ya que la parte conectada no respondi\xf3 adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexi\xf3n establecida ya que el host conectado no ha podido responder',))
+2018-05-25 16:14:00,520 INFO Logger initialized
+2018-05-25 16:14:01,299 INFO Connection to Sandbox appliance 192.168.20.140 sucessfull
+2018-05-25 16:14:01,302 INFO File already in folder, Forcepoint SIA integration.pdf
+2018-05-25 16:14:01,302 INFO File already in folder, McAfee.DLP.UseCases - copia.docx
+2018-05-25 16:14:01,302 INFO File already in folder, McAfee.DLP.UseCases.docx
+2018-05-25 16:14:01,302 INFO File already in folder, McAfee_ENMELM_VM8.ova
+2018-05-25 16:14:01,302 INFO File already in folder, putty - copia.exe
+2018-05-25 16:14:01,302 INFO File already in folder, putty.exe
+2018-05-25 16:14:01,302 INFO File already in folder, sb-checkpoint-mcafee.pdf
+2018-05-25 16:16:33,098 INFO Created Event detected, c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\Removepywin32.exe
+2018-05-25 16:16:33,226 INFO Submitting File c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\Removepywin32.exe with MD5 5f1707646575d375c50155832477a437
+2018-05-25 16:16:33,549 INFO File c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\Removepywin32.exe submitted successfully
+2018-05-25 16:16:36,290 INFO Created Event detected, c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\putty - copia (2).exe
+2018-05-25 16:16:36,290 INFO File no yet downloaded or beyond limits, c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\putty - copia (2).exe
+2018-05-25 16:21:34,101 INFO Heartbeat received from  192.168.20.140 
+2018-05-25 16:21:34,167 INFO Submitting File c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\putty - copia (2).exe with MD5 227defdc09bf329d4adf7cab6e7cad74
+2018-05-25 16:21:34,532 INFO File c:\Users\cmunoz\eclipse-workspace\python-workspace\oberver_test\pruebas\putty - copia (2).exe submitted successfully
+2018-05-25 16:23:15,848 INFO Keyboard interrupt received. Stopping observer
+2018-05-25 16:23:16,023 INFO Disconection from Sandbox appliance 192.168.20.140 sucessfull
+2018-05-25 16:23:16,023 INFO Stopping threads
+2018-05-25 16:34:35,296 INFO Logger initialized
+2018-05-25 16:34:35,740 INFO Connection to Sandbox appliance 192.168.20.140 sucessfull
+2018-05-25 16:36:47,322 INFO Created Event detected, .\pruebas\Entradas.pdf
+2018-05-25 16:36:47,322 INFO Created Event detected, .\pruebas\entradas.pdfmccdlpsync{$}
+2018-05-25 16:36:47,545 INFO Submitting File .\pruebas\Entradas.pdf with MD5 3ea11bd5019331555dcdb727bf0c137f
+2018-05-25 16:36:48,118 INFO File .\pruebas\Entradas.pdf submitted successfully
+2018-05-25 16:37:41,703 INFO Created Event detected, .\pruebas\Entradas - copia.pdf
+2018-05-25 16:37:41,703 INFO Created Event detected, .\pruebas\entradas - copia.pdfmccdlpsync{$}
+2018-05-25 16:37:41,845 INFO File .\pruebas\Entradas - copia.pdf with MD5 3ea11bd5019331555dcdb727bf0c137f already white or black listed
+2018-05-25 16:39:35,947 INFO Keyboard interrupt received. Stopping observer
+2018-05-25 16:39:36,980 INFO Disconection from Sandbox appliance 192.168.20.140 sucessfull
+2018-05-25 16:39:36,980 INFO Stopping threads

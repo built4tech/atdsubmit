@@ -24,7 +24,7 @@ last_time = time.time()
 
 NUM_WORKER_THREADS = 1
 HEARTBEAT_VALUE = 300 # heartbeat of 5 minutes
-MONITORED_FOLDER = u"c:\\Users\\cmunoz\\eclipse-workspace\\python-workspace\\oberver_test\\pruebas"
+MONITORED_FOLDER = u".\\pruebas"
 files_uploaded = []
 logFile=os.curdir + os.sep + 'log' + os.sep + 'observer.log'
 logger = ""
