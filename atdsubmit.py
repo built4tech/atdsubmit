@@ -6,6 +6,7 @@ import Queue
 import threading
 import sys
 import hashlib
+import argparse
 
 
 import logging
@@ -13,9 +14,10 @@ from logging.handlers import RotatingFileHandler, TimedRotatingFileHandler
 
 from atd import atd
 
-ATD_Server = "192.168.20.140"
-ATD_User = "apiuser"
-ATD_Pass = "McAfee123!"
+ATD_Server = "" # "192.168.20.140"
+ATD_User   = "" # "apiuser"
+ATD_Pass   = "" # "McAfee123!"
+MONITORED_FOLDER = "" # "u".\\pruebas"
 
 q = Queue.Queue()
 threads = []
@@ -244,8 +246,55 @@ def manage_uploads(i, mySandbox):
         q.task_done()
         
 
+def parseargs():
+    '''
+    Description: Function in charge of the CLI parameters
+    Input:       No input
+    Output:      Parsed arguments
+    '''
+    description = 'ATD submitter'
+    prog = 'atdsubmit.py'
+    usage = '\natdsubmit.py [-ip ATD_IP_Address] [-u ATD_Username] [-p ATD_Password] [-m folder_to_monitor]'
+    epilog = 'Carlos Munoz (carlos.munoz.garrido@outlook.com)\n%(prog)s 1.0 (26/05/2018)'
+
+    parser = argparse.ArgumentParser(epilog=epilog, usage=usage, prog=prog, description=description, formatter_class=argparse.RawTextHelpFormatter)
+
+    atd_group = parser.add_argument_group("ATD parameters")
+
+    arg_help = "Ip address of ATD appliance"
+    atd_group.add_argument('-ip', required=True, default = "", action='store', dest='atd_ipaddress', help=arg_help, metavar= "")
+
+    arg_help = "Username for ATD"
+    atd_group.add_argument('-u', required=True, default = "", action='store', dest='atd_username', help=arg_help, metavar="")
+
+    arg_help = "Password for ATD"
+    atd_group.add_argument('-p', required=True, default = "", action='store', dest='atd_password', help=arg_help, metavar="")
+
+    arg_help = "Folder to monitor"
+    parser.add_argument('-m', required=True, default = "", action='store', dest='monitor_folder', help=arg_help,
+                        metavar="")
+
+    parser.add_argument('--version', action='version', version='Carlos Munoz (carlos.munoz.garrido@outlook.com)\n%(prog)s 1.0 (26/05/2018)')
+
+    return parser.parse_args()
+
+
+
 def main():
     global files_uploaded
+    global ATD_Server
+    global ATD_User
+    global ATD_Pass
+    global MONITORED_FOLDER
+    
+    #Obteniendo parametros pasados en CLI
+    option = parseargs()
+
+    ATD_Server = option.atd_ipaddress
+    ATD_User   = option.atd_username
+    ATD_Pass   = option.atd_password
+    MONITORED_FOLDER = option.monitor_folder   
+
     
     # Inicializando logger
     Utils.log_setup()
